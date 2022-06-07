@@ -1,0 +1,112 @@
+:root{
+    --main-radius:15px;
+    --main-padding:15px;
+    font-family: system-ui;
+    color: white;
+}
+
+html{
+    height:100vh;
+}
+
+body{
+	background: linear-gradient(-45deg, #33475b, #0033CC, #FF77CC, rgb(255, 122, 89));
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient{
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+nav{
+    border-radius:var(--main-radius);
+    padding-top: var(--main-padding);
+    text-align:center;
+}
+
+main{
+    border-radius:var(--main-radius);
+    padding-top: var(--main-padding);
+    text-align:center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5em 1.7em;
+    margin: 0 0.1em 0.1em 0;
+    border: 0.16em solid blanchedalmond;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    color: white;
+    text-shadow: 0 0.04em 0.04em rgba(255, 255, 255, 0.253);
+    text-align: center;
+    transition: all 0.2s;
+    background-color: #11ffee00;
+  }
+  
+  .btn:hover {
+    color: white;
+    background-color: #33475b;
+}
+
+.ipt{
+    border-bottom: 2px solid red;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p{
+    border-radius:var(--main-radius);
+    border: solid blanchedalmond;
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto-fill, 200px);
+    grid-row-gap: 100px;
+    grid-column-gap: 1em;
+    text-align: center;
+}
+
+@media only screen and (max-width : 750px) and (min-width:451px){
+    .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(auto-fill, 200px);
+        grid-row-gap: 50px;
+        grid-column-gap: 1em;
+    }
+}
+
+@media only screen and (max-width : 450px){
+    .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto-fill, 200px);
+        grid-row-gap: .5em;
+        grid-column-gap: 1em;
+    }
+}

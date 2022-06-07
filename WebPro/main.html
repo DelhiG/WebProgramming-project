@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Test</title>
+    </head>
+    <body>
+        <nav id="nav">Web Programming project</nav>
+        <main id="main">List and description of cities</main>
+        <div id="AddForm" style="display:none">
+            <form onsubmit="addCity();return false">
+                <div class="form">
+                    <label>Choose a city: </label>
+                    <input type="text" name="" id="AddName" required="required">
+                </div>
+                <div class="form">
+                    <label>Choose a file to upload: </label>
+                    <input type="file" name=""
+                     id="AddImg" accept="image/*" required="required">
+                </div>
+                <div class="form">
+                    <label> Enter a description:</label>
+                    <input type="text"
+                     id="AddDescription" required = "required">
+                </div>
+                <button id="Addfinalbutt" class="btn" type="submit">Confirm</button>
+            </form>
+        </div>
+        <div id="RemForm" style="display:none">
+            <form onsubmit="remCity();return false">
+                <div class="form">
+                    <label>Choose a city: </label>
+                    <input type="text" name="" id="RemName" required="required">
+                </div>
+                <button id="Remfinalbutt" class="btn" type ="submit">Confirm</button>
+            </form>
+        </div>
+        <button id="AddButt" class="btn">Add a city</button>
+        <button id="RemButt" class="btn">Remove a city</button>
+        <div class="container" id = "container">
+            <div id="Paris">
+                <p>Paris</p>
+                <img src="paris.jpg" alt="" />
+                <p contenteditable="true">France's capital city</p>
+            </div>
+            <div id="Rome">
+                <p>Rome</p>
+                <img src="rome.jpg" alt="" />
+                <p contenteditable="true">Italy's capital city</p>
+            </div>
+            <div id="Amsterdam">
+                <p>Amsterdam</p>
+                <img src="amsterdam.jpg" alt="" />
+                <p contenteditable="true">Netherlands's capital city</p>
+            </div>
+            <div id="Berlin">
+                <p>Berlin</p>
+                <img src="berlin.jpg" alt="" />
+                <p contenteditable="true">Germany's capital city</p>
+            </div>
+            <div id="Madrid">
+                <p>Madrid</p>
+                <img src="madrid.jpg" alt="" />
+                <p contenteditable="true">Spain's capital city</p>
+            </div>
+            <div id="London">
+                <p>London</p>
+                <img src="london.jpg" alt="" />
+                <p contenteditable="true">England's capital city</p>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
